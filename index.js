@@ -1,25 +1,43 @@
 /************************************************************** Task 1: Warm-up! **************************************************************/
 //Task a: declare a variable called votingAge, console log true if age > 18 (no function required)
 
+const votingAge = 18
 
+if (votingAge > 18) {
 
+    console.log(true);
+}else{
+    console.log(false);
+}
 
 
 //Task b: declare a variable and then use a conditional to change the value of that variable based on the value assigned to a second variable (no function required)
 
+let music = 'rock';
+let volume = 'soft';
 
-
+if (volume === 'soft'){
+    music = 'classical';
+}else if( volume === 'loud'){
+    music = 'rock';
+}
+console.log(music);
 
 
 //Task c: Convert string ("1999") to integer (1999)  (no function required) // hint look up the Number method
 
+const count = Number('1999');
 
-
+console.log(count);
 
 
 //Task d: Write a function to multiply a*b 
 
+function multiply(num1, num2){
+    return num1 * num2;
+}
 
+console.log(multiply(5,10));
 
 
 
@@ -27,7 +45,10 @@
 //Age in Dog years
 //write a function that takes your age and returns it to you in dog years - they say that 1 human year is equal to seven dog years 
 
-
+function dogyears(num1){
+    return num1*7;
+}
+console.log(dogyears(25));
 
 
 
@@ -48,7 +69,31 @@
 // 7 - 12 months 4% of their body weight
 
 // when you are finished invoke your function with the weight of 15 lbs and the age of 1 year - if your calculations are correct your result should be 0.44999999999999996
-  
+
+function dogfood(dogweight,dogage){
+    if (dogweight <= 5 && dogage >= 1){ 
+        return dogweight * .05;
+}
+else if (dogweight > 5 && dogweight < 11 && dogage >= 1){
+    return dogweight * .04;
+}
+else if (dogweight > 10 &&  dogweight < 16 && dogage >= 1){
+    return dogweight * .03;
+}
+else if (dogweight > 15 && dogage >= 1){
+    return dogweight * .02;
+}
+else if (dogage >= .167 || dogage <= .333){
+    return dogweight * .1;
+}
+else if (dogage >= .333 || dogage <= .583){
+    return dogweight * .05;
+}
+else if (dogage >= .583 || dogage <=1){
+    return dogweight * .04;
+}
+}
+  console.log(dogfood(15, 1));
 
 
 

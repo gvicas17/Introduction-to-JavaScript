@@ -174,10 +174,14 @@ console.log(centimeters(2));
 // create a function called annoyingSong
 // the function should take a starting number as an argument and count down - at each iteration it should log (number) bottles of soda on the wall, (number) bottles of soda, take one down pass it around (number left over) bottles of soda on the wall`
   
-function annoyingSong(){
-    for (let i = 99; i < 0; i++);
-}
 
+function annoyingSong(){
+    
+    for(let i = 99; i > 0; i--){
+        console.log(i + "bottles of soda on the wall," + i + "bottles of soda, take one down pass it around" + (i-1) + "bottles of soda on the wall");
+    }
+}
+    annoyingSong();
 
 
 
@@ -192,7 +196,24 @@ function annoyingSong(){
 //60s should be D 
 //and anything below 60 should be F
   
-
+function lettergrade(percentage){
+    if (percentage > 89){
+       console.log("A");
+    }
+    else if (percentage > 79){
+        console.log("B");
+    }
+    else if (percentage > 69){
+        console.log("C");
+    }
+    else if (percentage > 59){
+        console.log("D");
+    }
+    else if (percentage < 60){
+        console.log("F")
+    }
+}
+console.log(lettergrade(40));
   
   
 

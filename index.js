@@ -3,7 +3,7 @@
 
 const votingAge = 18
 
-if (votingAge > 18) {
+if (votingAge >= 18) {
 
     console.log(true);
 }else{
@@ -105,7 +105,45 @@ else if (dogage >= .583 || dogage <=1){
 // use math.random to determine the computers choice 
 // hint while you can complete this with only conditionals based on strings it may help to equate choice to a number 
 
-  
+function winlosetie(humanchoice){
+    
+    let computerchoice = Math.random();
+    
+    if (humanchoice === 'rock' && computerchoice < .34){
+            console.log("Tie!");
+        }
+
+    else if (humanchoice === 'rock' && computerchoice >=.34 && computerchoice <= .67){
+        console.log("You Lost!");
+    }
+    
+    else if (humanchoice === 'rock' && computerchoice > .67){
+        console.log("You Won!");
+    }
+    
+    if (humanchoice === 'paper' && computerchoice < .34){
+        console.log("You Won!");
+    }
+
+    else if (humanchoice === 'paper' && computerchoice >=.34 && computerchoice <= .67){
+    console.log("Tie");
+    }
+    else if (humanchoice === 'paper' && computerchoice > .67){
+        console.log("You Lost!");
+    }
+    if (humanchoice === 'sissors' && computerchoice < .34){
+        console.log("You Lost!");
+    }
+
+    else if (humanchoice === 'sissors' && computerchoice >=.34 && computerchoice <= .67){
+    console.log("You Won!");
+    }
+    else if (humanchoice === 'sissors' && computerchoice > .67){
+    console.log("Tie!");
+    }
+}
+
+    console.log(winlosetie('rock'));
   
 
 /************************************************************** Task 5 **************************************************************/
@@ -113,12 +151,21 @@ else if (dogage >= .583 || dogage <=1){
 //a. KM to Miles - should take the number of kilometers and convert it to the equal number of miles
 
 
+function miles(kilometers){
+    return kilometers * .62137;
+}
+
+console.log(miles(2));
 
 
 
 //b. Feet to CM - should take the number of feet and convert it to the equal number of centimeters
   
+function centimeters(feet){
+  return feet * 30.48;
+}
 
+console.log(centimeters(2));
 
 
 
@@ -127,6 +174,11 @@ else if (dogage >= .583 || dogage <=1){
 // create a function called annoyingSong
 // the function should take a starting number as an argument and count down - at each iteration it should log (number) bottles of soda on the wall, (number) bottles of soda, take one down pass it around (number left over) bottles of soda on the wall`
   
+function annoyingSong(){
+    for (let i = 99; i < 0; i++);
+}
+
+
 
 
 
@@ -156,8 +208,3 @@ else if (dogage >= .583 || dogage <=1){
 /************************************************************** Stretch **************************************************************/
 //Take Rock, Paper, Sissors further
 //update your rock papers sissors code below to take a prompt from a user using the window object
-
-
-
-
-
